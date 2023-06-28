@@ -1,0 +1,40 @@
+.card {
+  width: 25rem;
+  margin: 0.5rem;
+  padding: 1rem;
+  min-height: 5rem;
+  background-color: rgb(51, 54, 53);
+  border-radius: 1rem;
+  color: rgb(210, 211, 214);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.25s;
+}
+.author-name {
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0.3rem 0rem;
+}
+.description {
+  word-spacing: 2px;
+  line-height: 1.3rem;
+  margin: 7px 0px;
+}
+.inner-div {
+  display: flex;
+  width: 25rem;
+  margin: 0.5rem;
+}
+.lang,
+.owner {
+  margin: 0.4rem 1rem;
+}
+.commit {
+  margin: 0.2rem 0;
+}
+.icon {
+  margin: 00.2rem 0.4rem 0;
+}
+.card:hover {
+  box-shadow: 5px 5px 15px 5px rgb(64, 88, 76);
+  transition: 0.45s;
+}

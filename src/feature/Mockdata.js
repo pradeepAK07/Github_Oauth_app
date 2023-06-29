@@ -7,3 +7,4 @@ export const data = [
   "C++",
   "JavaScript",
 ];
+const array = [];

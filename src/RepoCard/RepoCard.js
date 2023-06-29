@@ -2,11 +2,21 @@ import React from "react";
 import "./RepoCard.css";
 import { RiGitRepositoryLine } from "react-icons/ri";
 import { VscGitCommit } from "react-icons/vsc";
-import { GrLanguage } from "react-icons/gr";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { RepoInfo } from "../feature/RepoSlice";
 
 const RepoCard = ({ repos }) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const CardClick = () => {
+    navigate(`/repos/${repos.name}`);
+    //dsipatch the repo information to store
+    dispatch(RepoInfo(repos));
+  };
   return (
-    <div className="card">
+    <div className="card" onClick={() => CardClick()}>
       <h1 className="author-name">
         <RiGitRepositoryLine className="icon" />
         {repos.full_name}

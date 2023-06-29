@@ -1,0 +1,53 @@
+body {
+  height: 100vh;
+  background-color: rgb(48, 146, 100);
+}
+.repo-card {
+  margin-top: 6rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  width: 40%;
+  min-height: 8rem;
+  background-color: rgb(51, 54, 53);
+  color: aliceblue;
+  transition: 1s;
+}
+.p-details > p {
+  padding: 0.5rem;
+}
+.repo-author-name {
+  margin-bottom: 0.5rem;
+}
+.card-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.repo-author-name {
+  color: rgb(67, 130, 189);
+}
+.repo-card:hover {
+  box-shadow: 5px 5px 10px black;
+  transition: 0.45s;
+}
+@media only screen and (max-width: 600px) {
+  .repo-card {
+    margin-top: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 2rem;
+    padding: 3rem;
+    text-align: center;
+    width: 60%;
+    min-height: 8rem;
+    background-color: rgb(51, 54, 53);
+    color: aliceblue;
+    transition: 1s;
+    margin-bottom: 3rem;
+  }
+  .repo-author-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}

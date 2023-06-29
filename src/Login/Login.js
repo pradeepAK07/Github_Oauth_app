@@ -4,12 +4,15 @@ import { useNavigate } from "react-router-dom";
 import auth from "./git authcopy.jpg";
 
 const Login = () => {
-  const REACT_APP_GITHUB_CLIENT_ID = "6c13b24297888d8488bb";
+  const REACT_APP_GITHUB_CLIENT_ID = "your client id";
   const navigate = useNavigate();
+
+  //authentication for oauth
   function LoginWithGithub() {
     window.location.assign(
       `https://github.com/login/oauth/authorize?client_id=${REACT_APP_GITHUB_CLIENT_ID}`
     );
+    //after auth this will navigate to repos page
     navigate("/repos");
   }
 
@@ -24,11 +27,13 @@ const Login = () => {
         </div>
         <div className="intro">
           <p className="instruction-header">Instructions</p>
-          <p className="instruction">
-            $ After clicking the Login(button) a page will show like the beside
-            image and you need to click the green color "authorize" button to
-            see the trending repositories.
-          </p>
+          <ul className="instruction">
+            <li>
+              After clicking the Login(button) a page will show like the beside
+              image and you need to click the green color "authorize" button to
+              see the trending repositories.
+            </li>
+          </ul>
           <button onClick={LoginWithGithub} className="login-btn">
             LOGIN
           </button>

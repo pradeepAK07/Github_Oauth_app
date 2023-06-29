@@ -2,11 +2,16 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import RepoCard from "../RepoCard/RepoCard";
 import "./Repos.css";
+import { useSelector } from "react-redux/es/hooks/useSelector";
+import DropDown from "../Dropdown/DropDown";
 
 const Repos = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
+  //getting the redux dropdown value
+  const dropDownvalue = useSelector((state) => state.dropDown.value);
 
+  //setting the state with api
   useEffect(() => {
     const handleTrendingRepos = async () => {
       try {
@@ -23,9 +28,7 @@ const Repos = () => {
         const trendingRepos = response.data.items;
         setRepos(trendingRepos);
         setLoading(false);
-        console.log(repos);
       } catch (error) {
-        console.error("Error fetching trending repositories:", error);
         setLoading(false);
       }
     };
@@ -33,15 +36,24 @@ const Repos = () => {
     handleTrendingRepos();
   }, []);
 
-  console.log(repos);
+  //filtering the dropdown
+  useEffect(() => {
+    const filterRepos = repos.filter((val) => {
+      return val?.language === dropDownvalue;
+    });
+    console.log("use effect drop");
+    setRepos(filterRepos);
+  }, [dropDownvalue]);
+
   return (
     <div>
       <div className="nav-bar">
         <h2 className="repos-heading">Trending Repositories</h2>
+        <DropDown />
       </div>
       <div className="card-container">
         {loading ? (
-          <p>Loading...</p>
+          <p className="loading">Loading...</p>
         ) : (
           <>
             {repos.map((repo) => (

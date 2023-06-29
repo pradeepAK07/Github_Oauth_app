@@ -1,0 +1,20 @@
+.error-container {
+  text-align: center;
+}
+
+.error-heading {
+  margin-bottom: 10px;
+  margin-top: 200px;
+  font-size: 24px;
+  color: #efeeee;
+}
+
+.error-message {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.error-image {
+  width: 200px;
+  height: 200px;
+}

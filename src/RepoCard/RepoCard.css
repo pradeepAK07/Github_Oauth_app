@@ -1,4 +1,5 @@
 .card {
+  cursor: pointer;
   width: 25rem;
   margin: 0.5rem;
   padding: 1rem;
@@ -12,12 +13,13 @@
 .author-name {
   font-size: 1.4rem;
   margin: 0;
+  color: rgb(67, 130, 189);
   padding: 0.3rem 0rem;
 }
 .description {
   word-spacing: 2px;
   line-height: 1.3rem;
-  margin: 7px 0px;
+  margin: 7px 6px;
 }
 .inner-div {
   display: flex;

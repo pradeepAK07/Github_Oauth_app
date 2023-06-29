@@ -1,0 +1,12 @@
+.dropdown {
+  padding: 0.3rem;
+  margin-left: 5rem;
+  background-color: rgb(225, 212, 212);
+}
+@media (max-width: 600px) {
+  .dropdown {
+    padding: 0.3rem;
+    margin-left: 1rem;
+    background-color: rgb(225, 212, 212);
+  }
+}
